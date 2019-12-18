@@ -1,0 +1,43 @@
+#!/bin/bash
+
+# nvim > vim
+command -v nvim >/dev/null && alias vim="nvim" vimdiff="nvim -d"
+
+# Colours
+alias \
+	ls="ls -hN --color=auto --group-directories-first" \
+	la="ls -a --color=auto --group-directories-first" \
+	ll="ls -la --color=auto" \
+	grep="grep --color=auto" \
+	diff="diff --color=auto" \
+	ccat="highlight --out-format=ansi"
+
+# Verbose
+alias \
+	bat="cat /sys/class/power_supply/BAT?/capacity" \
+	cp="cp -iv" \
+	mv="mv -iv" \
+	rm="rm -v" \
+	mkd="mkdir -pv" \
+	yt="youtube-dl --add-metadata -i" \
+	yta="yt -x -f bestaudio/best" \
+	ffmpeg="ffmpeg -hide_banner"
+
+# ETC
+alias \
+	p="sudo pacman" \
+	pu="sudo pacman -Syu" \
+	pfu="sudo pacman -Syu && yay -Syu && flatpak update" \
+	pd="sudo pacman -Rs $(pacman -Qtdq)" \
+	v="nvim" \
+	i3cfg="nvim ~/.config/i3/config" \
+	cfg="nvim ~/.config/bspwm/bspwmrc" \
+	hotkey="nvim ~/.config/sxhkd/sxhkdrc" \
+	ka="killall" \
+	g="git" \
+	f="ranger" \
+	e="nvim" \
+	def="/usr/bin/sdcv" \
+	trem="transmission-remote" \
+	tremcli="transmission-remote-cli" \
+	dots='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
