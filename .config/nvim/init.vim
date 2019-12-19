@@ -20,6 +20,7 @@ Plug 'tpope/vim-commentary'
 Plug 'kovetskiy/sxhkd-vim'
 Plug 'stevearc/vim-arduino'
 Plug 'lervag/vimtex'
+Plug 'ying17zi/vim-live-latex-preview', { 'for': 'tex' }
 call plug#end()
 
 set bg=light
@@ -44,6 +45,8 @@ set clipboard+=unnamedplus
 	let g:arduino_cmd = '/usr/share/arduino/arduino'
 	let g:arduino_dir = '/usr/share/arduino'
 
+" LaTeX default pdf
+	let g:livepreview_previewer = 'zathura'
 
 " Goyo plugin makes text more readable when writing prose:
 	map <leader>f :Goyo \| set bg=light \| set linebreak<CR>
@@ -93,7 +96,7 @@ set clipboard+=unnamedplus
 " Ensure files are read as what I want:
 	let g:vimwiki_ext2syntax = {'.Rmd': 'markdown', '.rmd': 'markdown','.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
 	map <leader>v :VimwikiIndex
-	let g:vimwiki_list = [{'path': '~/vimwiki', 'syntax': 'markdown', 'ext': '.md'}]
+	let g:vimwiki_list = [{'path': '~/.local/share/vimwiki', 'syntax': 'markdown', 'ext': '.md'}]
 	autocmd BufRead,BufNewFile /tmp/calcurse*,~/.calcurse/notes/* set filetype=markdown
 	autocmd BufRead,BufNewFile *.ms,*.me,*.mom,*.man set filetype=groff
 	autocmd BufRead,BufNewFile *.tex set filetype=tex

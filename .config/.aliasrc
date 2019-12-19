@@ -40,4 +40,5 @@ alias \
 	def="/usr/bin/sdcv" \
 	trem="transmission-remote" \
 	tremcli="transmission-remote-cli" \
-	dots='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+	dots="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME" \
+	feh="feh --scale-down --auto-zoom --image-bg black" \
