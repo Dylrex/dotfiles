@@ -96,7 +96,13 @@ shift + Print
 	$HOME/.local/bin/screenimgur
 
 
-# Media
+# XF86
+XF86MonBrightnessUp
+    xbacklight -inc 10
+
+XF86MonBrightnessDown
+    xbacklight -dec 10
+
 XF86AudioRaiseVolume
 	/$HOME/.local/bin/dunst/volchange.sh volup &
 XF86AudioLowerVolume
