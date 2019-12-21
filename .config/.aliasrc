@@ -42,3 +42,9 @@ alias \
 	tremcli="transmission-remote-cli" \
 	dots="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME" \
 	feh="feh --scale-down --auto-zoom --image-bg black" \
+
+# Non XDG compliant T-T
+alias \
+	abook="abook -C ~/.config/abook/abookrc --datafile ~/.config/abook/addressbook" \
+	calcurse="calcurse -D ~/.config/calcurse" \
+	tmux="tmux -f ~/.config/tmux.conf"

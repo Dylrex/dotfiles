@@ -29,8 +29,6 @@ if [[ $(hostname) == 'somnia' ]]; then
 	bspc monitor DVI-I-1 -d 6 7 8 9 10
 elif [[ $(hostname) == 'laptop']]; then
 	bspc monitor eDP1 -d 1 2 3 4 5 6 7 8 9 10
-elif [[ $(hostname) == 'somnia']]; then
-	bspc monitor DVI-D-1 -d 1 2 3 4 5 6 7 8 9 10
 fi
 
 #bspc monitor DVI-D-1 -d 1 2 3 4 5
@@ -49,10 +47,6 @@ bspc config focus_follows_pointer	true
 ## Colours
 bspc config normal_border_color		"#383C4A"
 bspc config focused_border_color	"#84927D"
-
-## Polybar fullscreen
-#xdo below -t $(xdo id -n root) $(xdo id -a polybar-main_DVI-I-1)
-#xdo below -t $(xdo id -n root) $(xdo id -a polybar-main_DVI-D-1)
 
 ## Workspace Rules
 #bspc rule -a com.spotify.Client desktop='^9'
