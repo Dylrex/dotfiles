@@ -267,7 +267,7 @@ type = internal/xbacklight
 format = <label> <bar>
 label = ﯧ
 
-bar-width = 10
+bar-width = 6
 bar-indicator = |
 bar-indicator-foreground = #ff
 bar-indicator-font = 2
@@ -375,7 +375,7 @@ format-muted-prefix = " "
 format-muted-foreground = ${colors.foreground}
 label-muted = muted
 
-bar-volume-width = 10
+bar-volume-width = 6
 bar-volume-foreground-0 = ${colors.foreground}
 bar-volume-foreground-1 = ${colors.foreground}
 bar-volume-foreground-2 = ${colors.foreground}
@@ -402,15 +402,15 @@ full-at = 98
 
 ;format-charging = Charging... <label-charging>
 format-charging = <animation-charging> <label-charging>
-format-charging-underline = ${colors.highlight}
+format-charging-underline = #d4af37
 
 ;format-discharging = <label-discharging>
 format-discharging = <ramp-capacity> <label-discharging>
-format-discharging-underline = ${self.format-charging-underline}
+format-discharging-underline = ${colors.highlight}
 
 format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground}
-format-full-underline = ${self.format-charging-underline}
+format-full-underline = #228B22
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
