@@ -50,7 +50,7 @@ font-5 = Weather Icons:size=11;1
 ; Other modules: xkeyboard filesystem xbacklight backlight-acpi cpu memory temperature powermenu weather
 modules-left = bspwm xwindow
 modules-center = spotify
-modules-right = volume battery weather mutt-wizard updates date
+modules-right = volume weather mutt-wizard updates date
 
 wm-restack = bspwm
 

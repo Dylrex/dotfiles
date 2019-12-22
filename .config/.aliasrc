@@ -33,6 +33,7 @@ alias \
 	i3cfg="nvim ~/.config/i3/config" \
 	cfg="nvim ~/.config/bspwm/bspwmrc" \
 	hotkey="nvim ~/.config/sxhkd/sxhkdrc" \
+	polcfg="nvim /$HOME/.config/polybar/config" \
 	ka="killall" \
 	g="git" \
 	f="ranger" \
@@ -42,6 +43,8 @@ alias \
 	tremcli="transmission-remote-cli" \
 	dots="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME" \
 	feh="feh --scale-down --auto-zoom --image-bg black" \
+	rbsp="/$HOME/.config/bspwm/bspwmrc" \
+	rpol="/$HOME/.config/polybar/launch.sh"
 
 # Non XDG compliant T-T
 alias \
