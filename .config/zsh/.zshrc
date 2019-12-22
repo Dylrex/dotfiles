@@ -54,10 +54,10 @@ echo -ne '\e[5 q'
 # Use beam shape cursor for each new prompt.
 preexec() { echo -ne '\e[5 q' ;}
 
-# Use lf to switch directories and bind it to ctrl-o
-lfcd () {
+# Use ranger to switch directories and bind it to ctrl-o
+rangercd () {
     tmp="$(mktemp)"
-    lf -last-dir-path="$tmp" "$@"
+    ranger --choosedir="$tmp" "$@"
     if [ -f "$tmp" ]; then
         dir="$(cat "$tmp")"
         rm -f "$tmp"
@@ -69,7 +69,7 @@ lfcd () {
     fi
 }
 
-bindkey -s '^o' 'lfcd\n'  # zsh
+bindkey -s '^o' 'rangercd\n'  # zsh
 
 [ -f "$HOME/.config/.aliasrc" ] && source "$HOME/.config/.aliasrc"
 
