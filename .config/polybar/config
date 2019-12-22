@@ -1,11 +1,4 @@
 ; vim:ft=dosini
-;=====================================================
-;   To learn more about how to configure Polybar
-;   go to https://github.com/jaagr/polybar
-;
-;   The README contains alot of information
-;
-;=====================================================
 
 [colors]
 background = ${xrdb:color0:#222}
@@ -15,6 +8,7 @@ foreground-alt = ${xrdb:color2:#555}
 highlight = ${xrdb:color3:#f00}
 urgent = #f00
 
+#### MAIN BAR ####
 [bar/main]
 monitor = ${env:MONITOR:DVI-D-1}
 enable-ipc = true
@@ -39,7 +33,6 @@ padding-right = 0
 module-margin-left = 1
 module-margin-right = 1
 
-#font-0 = mono:pixelsize=11;1
 font-0 = Noto Sans:size=11;1
 font-1 = Inconsolata Nerd Font:size=11;1
 font-2 = Noto Color Emoji:scale=11:style=Regular;2
@@ -47,7 +40,6 @@ font-3 = Symbola:pixelsize=11;1
 font-4 = NanumGothic:size=11;1
 font-5 = Weather Icons:size=11;1
 
-; Other modules: xkeyboard filesystem xbacklight backlight-acpi cpu memory temperature powermenu weather
 modules-left = bspwm xwindow
 modules-center = spotify
 modules-right = volume weather mutt-wizard updates date
@@ -59,8 +51,7 @@ wm-restack = bspwm
 scroll-up = bspwm-desknext
 scroll-down = bspwm-deskprev
 
-
-
+#### SECONDARY BAR ####
 [bar/second]
 monitor = ${env:MONITOR:DVI-I-1}
 enable-ipc = true
@@ -75,7 +66,7 @@ background = ${colors.background}
 foreground = ${colors.foreground}
 
 line-size = 3
-line-color = {$xrdb:red}
+line-color = #f00
 
 border-size = 0
 border-color = #000000
@@ -108,7 +99,7 @@ wm-restack = bspwm
 scroll-up = bspwm-desknext
 scroll-down = bspwm-deskprev
 
-
+#### LAPTOP BAR ####
 [bar/laptop]
 monitor = ${env:MONITOR:eDP1}
 enable-ipc = true
@@ -123,7 +114,7 @@ background = ${colors.background}
 foreground = ${colors.foreground}
 
 line-size = 3
-line-color = {$xrdb:red}
+line-color = #f00
 
 border-size = 0
 border-color = #000000
@@ -141,7 +132,6 @@ font-3 = Symbola:pixelsize=12;1
 font-4 = NanumGothic:size=12;1
 font-5 = Weather Icons:size=12;1
 
-; Other modules: xkeyboard filesystem xbacklight backlight-acpi cpu memory temperature powermenu weather
 modules-left = bspwm xwindow
 modules-center = spotify
 modules-right = volume xbacklight battery weather mutt-wizard updates date
@@ -156,6 +146,8 @@ wm-restack = bspwm
 scroll-up = bspwm-desknext
 scroll-down = bspwm-deskprev
 
+
+#### INTERNAL MODULES ####
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:45:...%
@@ -218,7 +210,6 @@ type = internal/i3
 format = <label-state> <label-mode>
 index-sort = true
 wrapping-scroll = false
-
 ; Only show workspaces on the same output as the bar
 pin-workspaces = true
 
@@ -487,8 +478,7 @@ margin-top = 5
 margin-bottom = 5
 
 
-;; CUSTOM SCRIPTS
-
+#### CUSTOM MODULES ####
 [module/spotify]
 type = custom/script
 interval = 1
@@ -501,7 +491,7 @@ exec = python /$HOME/.local/bin/statusbar/spotifystatus.py -f '{play_pause}  {ar
 type = custom/script
 exec = /$HOME/.local/bin/statusbar/pacupdates
 interval = 600
-format-prefix-underline = ${colors.highlight}
+format-underline = ${colors.foreground}
 
 [module/mutt-wizard]
 type = custom/script
