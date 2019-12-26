@@ -87,7 +87,7 @@ super + ctrl + Escape
 super + shift + d
 	bspc config window_gap 0
 super + shift + t
-	bspc config window_gap 15
+	bspc config window_gap 20
 
 # Screenshot
 Print

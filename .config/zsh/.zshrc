@@ -8,7 +8,7 @@ SAVEHIST=10000
 
 setopt autocd
 bindkey -v
-zstyle :compinstall filename '/home/dylan/.zshrc'
+zstyle :compinstall filename '/home/dylan/zsh/.zshrc'
 
 # Auto and Tab completion
 autoload -Uz compinit

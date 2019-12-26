@@ -15,6 +15,10 @@ export PASSWORD_STORE_DIR="$HOME/.local/share/password-store"
 export LESSHISTFILE="/dev/null/"
 export ZDOTDIR="$HOME/.config/zsh"
 
+# A E S T H E T I C
+export PF_INFO="ascii title os kernel pkgs memory wm shell palette"
+
+
 [ -f "$HOME/.config/.aliasrc" ] && source "$HOME/.config/.aliasrc"
 
 [ "$(tty)" = "/dev/tty1" ] && ! pgrep -x Xorg >/dev/null && exec startx
