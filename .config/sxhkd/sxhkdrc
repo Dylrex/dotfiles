@@ -1,3 +1,12 @@
+# Binds
+#KP_{5,Begin}
+#m
+#	xdotool click 1
+#	xdotool click 3; bspc node -f
+
+#button3
+	#xdotool click 3
+
 # Programs
 super + Return
 	$TERMINAL
@@ -9,6 +18,8 @@ super + e
 	$TERMINAL -e neomutt
 super + r
 	$TERMINAL -e ranger
+super + shift + r
+	thunar
 super + p
 	$TERMINAL -e transmission-remote-cli
 super + d
@@ -21,10 +32,12 @@ super + v
 	$TERMINAL -e nvim -c VimwikiIndex
 super + n
 	$TERMINAL -e newsboat
+super + shift + n
+	kill -s USR1 $(pidof deadd-notification-center)
 super + m
 	$TERMINAL -e ncmpcpp
 super + shift + m
-	pavucontrol &
+	$TERMINAL -e pulsemixer
 
 # Navigation
 super + {h,j,k,l}
@@ -76,12 +89,16 @@ super + bracket{left,right}
     bspc desktop -f {prev,next}
 
 # Misc
+super + grave
+	dmenuunicode
 super + Escape
-	i3lock --nofork -B=1
+	betterlockscreen -l blur
 super + shift + Escape
 	/$HOME/.local/bin/prompt "Shutdown?" "sudo -A shutdown -h now"
 super + ctrl + Escape
 	/$HOME/.local/bin/prompt "Reboot?" "sudo -A reboot"
+
+
 
 # Gaps
 super + shift + d
@@ -118,6 +135,6 @@ shift + XF86AudioMute
 	playerctl play-pause &
 
 XF86Calculator
-	$HOME/.local/bin/i3cmds/ddspawn $HOME/.local/bin/i3cmds/ddcalc -f mono:pixelsize=24 &
+	$TERMINAL -e bc
 shift + XF86Calculator
 	pactl set-source-mute @DEFAULT_SOURCE@ toggle &

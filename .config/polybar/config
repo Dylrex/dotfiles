@@ -46,7 +46,7 @@ modules-right = volume weather mutt-wizard updates date
 
 wm-restack = bspwm
 
-;override-redirect = true
+override-redirect = true
 
 scroll-up = bspwm-desknext
 scroll-down = bspwm-deskprev
@@ -94,7 +94,7 @@ tray-padding = 0
 
 wm-restack = bspwm
 
-;override-redirect = true
+override-redirect = true
 
 scroll-up = bspwm-desknext
 scroll-down = bspwm-deskprev
@@ -141,7 +141,7 @@ tray-padding = 0
 
 wm-restack = bspwm
 
-;override-redirect = true
+override-redirect = true
 
 scroll-up = bspwm-desknext
 scroll-down = bspwm-deskprev

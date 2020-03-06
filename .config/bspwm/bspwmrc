@@ -11,6 +11,7 @@ pkill nabi
 pkill protonmail-bridge
 pkill xss-lock
 pkill mpdscribble
+pkill deadd-notification-center
 
 ## Autostart
 sxhkd &
@@ -19,7 +20,8 @@ picom &
 keepassxc &
 nabi &
 protonmail-bridge &
-xss-lock --transfer-sleep-lock -- i3lock --nofork -B=1 &
+deadd-notification-center &
+xss-lock --transfer-sleep-lock -- betterlockscreen -l blur &
 /$HOME/.config/polybar/launch.sh
 mpdscribble --conf "/$HOME/.config/mpdscribble/mpdscribble.conf" &
 
@@ -31,23 +33,28 @@ elif [[ $(hostname) == 'laptop' ]]; then
 	bspc monitor eDP1 -d 1 2 3 4 5 6 7 8 9 10
 fi
 
-#bspc monitor DVI-D-1 -d 1 2 3 4 5
-#bspc monitor DVI-I-1 -d 6 7 8 9 10
-
 ## Basics
 bspc config border_width		2
-bspc config window_gap			20
+bspc config window_gap			16
 bspc config split_ratio			0.5
-bspc config top_padding			20
+bspc config top_padding			26
 bspc config single_monocle		false
 bspc config borderless_monocle		true
 bspc config gapless_monocle		true
 bspc config focus_follows_pointer	true
+bspc config click_to_focus		true
 
 ## Colours
 bspc config normal_border_color		"#383C4A"
 bspc config focused_border_color	"#84927D"
 
-## Workspace Rules
+## Workspace and Window Rules
+bscp rule -a Zathura state=tiled
 #bspc rule -a com.spotify.Client desktop='^9'
 #bspc rule -a Discord desktop='^8'
+
+dropdownname="dropdown"
+bspc query -N -n .hidden >/dev/null || setsid $TERMINAL -n "$dropdownname" -e dropdown >/dev/null 2>&1 &
+bspc rule -a St:$dropdownname hidden=on
+bspc rule -a St:$dropdownname sticky=on
+bspc rule -a St:$dropdownname state=floating
