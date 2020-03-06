@@ -1,4 +1,9 @@
 #!/bin/bash
+if [[ $(hostname) == 'somnia' ]]; then
+	bspc config top_padding		26
+elif [[ $(hostname) == 'laptop' ]]; then
+	bspc config top_padding		34
+fi
 
 # nvim > vim
 command -v nvim >/dev/null && alias vim="nvim" vimdiff="nvim -d"
@@ -43,7 +48,7 @@ alias \
 	tremcli="transmission-remote-cli" \
 	dots="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME" \
 	feh="feh --scale-down --auto-zoom --image-bg black" \
-	rbsp="/$HOME/.config/bspwm/bspwmrc" \
+	rcfg="/$HOME/.config/bspwm/bspwmrc" \
 	rpol="/$HOME/.config/polybar/launch.sh"
 
 # Non XDG compliant T-T
