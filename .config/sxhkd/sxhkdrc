@@ -94,7 +94,6 @@ super + ctrl + Escape
 	/$HOME/.local/bin/prompt "Reboot?" "sudo -A reboot"
 
 
-
 # Gaps
 super + shift + d
 	bspc config window_gap 0
