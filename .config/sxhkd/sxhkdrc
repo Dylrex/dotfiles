@@ -1,11 +1,6 @@
 # Binds
 #KP_{5,Begin}
-#m
 #	xdotool click 1
-#	xdotool click 3; bspc node -f
-
-#button3
-	#xdotool click 3
 
 # Programs
 super + Return
