@@ -42,7 +42,7 @@ font-5 = Weather Icons:size=11;1
 
 modules-left = bspwm xwindow
 modules-center = spotify
-modules-right = volume weather mutt-wizard updates date
+modules-right = volume weather torrent mutt-wizard updates date
 
 wm-restack = bspwm
 
@@ -134,7 +134,7 @@ font-5 = Weather Icons:size=12;1
 
 modules-left = bspwm xwindow
 modules-center = spotify
-modules-right = volume xbacklight battery weather mutt-wizard updates date
+modules-right = volume xbacklight battery weather mutt-wizard torrent updates date
 
 tray-position = right
 tray-padding = 0
@@ -501,6 +501,14 @@ format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
 format-underline = ${colors.highlight}
 click-left = st -e neomutt
+
+[module/torrent]
+type = custom/script
+interval = 1
+exec = torrentstatus
+click-left = $TERMINAL -e transmission-remote-cli
+format-underline = ${colors.highlight}
+format-background = ${colors.background}
 
 [module/vpn]
 type = custom/script
