@@ -1,7 +1,3 @@
-# Binds
-#KP_{5,Begin}
-#	xdotool click 1
-
 # Programs
 super + Return
 	$TERMINAL
@@ -18,7 +14,7 @@ super + shift + r
 super + p
 	$TERMINAL -e transmission-remote-cli
 super + d
-	dmenu_run
+	dmenuwal
 super + shift + g
 	$TERMINAL -e htop
 super + c
