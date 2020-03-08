@@ -4,26 +4,26 @@ bspc rule -r "*"
 xsetroot -cursor_name left_ptr &
 
 ## Kill
-pkill nm-applet
-pkill picom
-pkill keepassxc
-pkill nabi
-pkill protonmail-bridge
-pkill xss-lock
-pkill mpdscribble
-pkill deadd-notification-center
+#pkill nm-applet
+#pkill picom
+#pkill keepassxc
+#pkill nabi
+#pkill protonmail-bridge
+#pkill xss-lock
+#pkill mpdscribble
+#pkill deadd-notification-center
 
-## Autostart
-sxhkd &
-nm-applet &
-picom &
-keepassxc &
-nabi &
-protonmail-bridge &
-deadd-notification-center &
-xss-lock --transfer-sleep-lock -- betterlockscreen -l blur &
-/$HOME/.config/polybar/launch.sh
-mpdscribble --conf "/$HOME/.config/mpdscribble/mpdscribble.conf" &
+# Startup Programs
+#sxhkd &
+#nm-applet &
+#picom &
+#keepassxc &
+#nabi &
+#protonmail-bridge &
+#deadd-notification-center &
+#xss-lock --transfer-sleep-lock -- betterlockscreen -l blur &
+#/$HOME/.config/polybar/launch.sh >/dev/null 2>&1 &
+#mpdscribble --conf "/$HOME/.config/mpdscribble/mpdscribble.conf" &
 
 ## Monitors
 if [[ $(hostname) == 'somnia' ]]; then
