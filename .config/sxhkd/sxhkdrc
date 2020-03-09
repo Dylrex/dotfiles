@@ -14,7 +14,7 @@ super + shift + r
 super + p
 	$TERMINAL -e transmission-remote-cli
 super + d
-	dmenuwal
+	j4-dmenu-desktop --term=$TERMINAL --dmenu=dmenuwal
 super + shift + g
 	$TERMINAL -e htop
 super + c

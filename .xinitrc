@@ -43,6 +43,8 @@ keepassxc &
 nabi &
 protonmail-bridge &
 deadd-notification-center &
+flatpak run com.discordapp.Discord &
+flatpak run com.spotify.Client &
 xss-lock --transfer-sleep-lock -- betterlockscreen -l blur &
 /$HOME/.config/polybar/launch.sh >/dev/null 2>&1 &
 mpdscribble --conf "/$HOME/.config/mpdscribble/mpdscribble.conf" &
