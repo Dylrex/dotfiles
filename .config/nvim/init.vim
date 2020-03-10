@@ -21,6 +21,7 @@ Plug 'kovetskiy/sxhkd-vim'
 Plug 'stevearc/vim-arduino'
 Plug 'lervag/vimtex'
 Plug 'ying17zi/vim-live-latex-preview', { 'for': 'tex' }
+Plug 'vim-pandoc/vim-pandoc-syntax'
 call plug#end()
 
 set bg=light
@@ -52,7 +53,7 @@ set clipboard+=unnamedplus
 	map <leader>f :Goyo \| set bg=light \| set linebreak<CR>
 
 " Spell-check set to <leader>o, 'o' for 'orthography':
-	map <leader>o :setlocal spell! spelllang=en_us<CR>
+	map <leader>o :setlocal spell! spelllang=en_au<CR>
 
 " Splits open at the bottom and right, which is non-retarded, unlike vim defaults.
 	set splitbelow splitright

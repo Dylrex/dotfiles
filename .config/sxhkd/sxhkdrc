@@ -30,6 +30,12 @@ super + m
 super + shift + m
 	$TERMINAL -e pulsemixer
 
+# Function keys
+super + F2
+	$HOME/.config/bspwm/bspwmrc
+super + F8
+	mailsync
+
 # Navigation
 super + {h,j,k,l}
 	bspc node -f {west,south,north,east}
@@ -89,7 +95,6 @@ super + shift + Escape
 super + ctrl + Escape
 	/$HOME/.local/bin/prompt "Reboot?" "sudo -A reboot"
 
-
 # Gaps
 super + shift + d
 	bspc config window_gap 0
@@ -101,7 +106,6 @@ Print
 	/$HOME/.local/bin/screenclip
 shift + Print
 	$HOME/.local/bin/screenimgur
-
 
 # XF86
 XF86MonBrightnessUp
