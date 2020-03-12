@@ -11,6 +11,8 @@ super + r
 	$TERMINAL -e ranger
 super + shift + r
 	thunar
+super + u
+	bspwmdd "$TERMINAL -c dropdowntmux -e tmuxdd" "dropdowntmux" 25 20 45 55
 super + p
 	$TERMINAL -e transmission-remote-cli
 super + d
@@ -117,8 +119,7 @@ XF86MonBrightnessDown
 XF86AudioRaiseVolume
 	/$HOME/.local/bin/dunst/volchange.sh volup &
 XF86AudioLowerVolume
-	/$HOME/.local/bin/dunst/volchange.sh voldown &
-XF86AudioMute
+	/$HOME/.local/bin/dunst/volchange.sh voldown & XF86AudioMute
 	/$HOME/.local/bin/dunst/volchange.sh volmute &
 
 shift + XF86AudioRaiseVolume
@@ -129,6 +130,6 @@ shift + XF86AudioMute
 	playerctl play-pause &
 
 XF86Calculator
-	$TERMINAL -e bc
+	bspwmdd "$TERMINAL -c dropdowncalc -e ddcalc" "dropdowncalc" 25 20 45 55
 shift + XF86Calculator
 	pactl set-source-mute @DEFAULT_SOURCE@ toggle &

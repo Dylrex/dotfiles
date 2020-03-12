@@ -19,11 +19,12 @@ bspc config focused_border_color	"#84927D"
 
 ## Workspace and Window Rules
 bspc rule -a Zathura state=tiled
-#bspc rule -a com.spotify.Client desktop='^9'
-#bspc rule -a Discord desktop='^8'
 
-dropdownname="dropdown"
-bspc query -N -n .hidden >/dev/null || setsid $TERMINAL -n "$dropdownname" -e dropdown >/dev/null 2>&1 &
-bspc rule -a St:$dropdownname hidden=on
-bspc rule -a St:$dropdownname sticky=on
-bspc rule -a St:$dropdownname state=floating
+st -c scratchterm -e tmuxdd &
+bspc rule -a scratchterm sticky=on state=floating hidden=on
+
+#dropdownname="dropdown"
+#bspc query -N -n .hidden >/dev/null || setsid $TERMINAL -n "$dropdownname" -e dropdown >/dev/null 2>&1 &
+#bspc rule -a St:$dropdownname hidden=on
+#bspc rule -a St:$dropdownname sticky=on
+#bspc rule -a St:$dropdownname state=floating
