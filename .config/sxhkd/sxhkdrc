@@ -22,6 +22,8 @@ super + shift + g
 super + c
 	$TERMINAL -e calcurse -D ~/.config/calcurse
 super + v
+	$TERMINAL -e pulsemixer
+super + shift +v
 	$TERMINAL -e nvim -c VimwikiIndex
 super + n
 	$TERMINAL -e newsboat
@@ -30,7 +32,7 @@ super + shift + n
 super + m
 	$TERMINAL -e ncmpcpp
 super + shift + m
-	$TERMINAL -e pulsemixer
+	$TERMINAL -e spt
 
 # Function keys
 super + F2
