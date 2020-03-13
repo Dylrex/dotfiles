@@ -113,10 +113,10 @@ shift + Print
 
 # XF86
 XF86MonBrightnessUp
-    xbacklight -inc 10
+    	xbacklight -inc 10
 
 XF86MonBrightnessDown
-    xbacklight -dec 10
+    	xbacklight -dec 10
 
 XF86AudioRaiseVolume
 	volchange.sh volup &
