@@ -117,10 +117,11 @@ XF86MonBrightnessDown
     xbacklight -dec 10
 
 XF86AudioRaiseVolume
-	/$HOME/.local/bin/dunst/volchange.sh volup &
+	volchange.sh volup &
 XF86AudioLowerVolume
-	/$HOME/.local/bin/dunst/volchange.sh voldown & XF86AudioMute
-	/$HOME/.local/bin/dunst/volchange.sh volmute &
+	volchange.sh voldown &
+XF86AudioMute
+	volchange.sh volmute &
 
 shift + XF86AudioRaiseVolume
 	playerctl next &
