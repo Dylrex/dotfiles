@@ -37,8 +37,13 @@ super + shift + m
 # Function keys
 super + F2
 	$HOME/.config/bspwm/bspwmrc
-super + F8
+super + F5
 	mailsync
+super + F8
+	dualmonitor
+super + shift + F8
+	dualtv
+
 
 # Navigation
 super + {h,j,k,l}
