@@ -10,7 +10,7 @@ super + e
 super + r
 	$TERMINAL -e ranger
 super + shift + r
-	Nemo
+	nemo
 super + u
 	bspwmdd "$TERMINAL -c dropdowntmux -e tmuxdd" "dropdowntmux" 25 20 45 55
 super + p
