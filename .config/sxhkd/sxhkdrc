@@ -124,11 +124,11 @@ XF86MonBrightnessDown
     	xbacklight -dec 10
 
 XF86AudioRaiseVolume
-	volchange.sh volup &
+	volchange volup &
 XF86AudioLowerVolume
-	volchange.sh voldown &
+	volchange voldown &
 XF86AudioMute
-	volchange.sh volmute &
+	volchange volmute &
 
 shift + XF86AudioRaiseVolume
 	playerctl next &

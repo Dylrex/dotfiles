@@ -40,8 +40,8 @@ font-3 = Symbola:pixelsize=11;1
 font-4 = NanumGothic:size=11;1
 font-5 = Weather Icons:size=11;1
 
-modules-left = bspwm xwindow
-modules-center = spotify
+modules-left = bspwm spotify mpd
+modules-center =
 modules-right = volume weather torrent mutt-wizard updates date
 
 wm-restack = bspwm
@@ -85,7 +85,7 @@ font-4 = NanumGothic:size=11;1
 font-5 = Weather Icons:size=11;1
 
 ; Other modules: xkeyboard filesystem xbacklight backlight-acpi cpu memory temperature powermenu weather
-modules-left = bspwm spotify
+modules-left = bspwm spotify mpd
 modules-center =
 modules-right = volume weather mutt-wizard updates filesystem date
 
@@ -298,7 +298,8 @@ label-song =  %artist% - %title%
 label-song-maxlen = 70
 label-song-ellipsis = true
 
-format-paused-foreground = ${colors.foreground-alt}
+format-paused-foreground = ${colors.background}
+#format-paused-foreground = ${colors.foreground-alt}
 
 [module/xbacklight]
 type = internal/xbacklight

@@ -9,13 +9,6 @@ eval $(/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh
 export $(gnome-keyring-daemon --start --components=pksc11,secrets,ssh,gpg)
 export SSH_AUTH_SOCK
 
-# enable hangul with nabi
-export XIM=nabi
-export XIM_ARGS=
-export XIM_PROGRAM="nabi"
-export XMODIFIERS="@im=nabi"
-export GTK_IM_MODULE=xim
-export QT_IM_MODULE=xim
 
 # merge in defaults and keymaps
 
@@ -36,17 +29,17 @@ if [ -f "$usermodmap" ]; then
 fi
 
 # program startup
+wal -R
 sxhkd &
 nm-applet &
 picom &
-keepassxc &
 nabi &
+keepassxc &
 protonmail-bridge --no-window &
 deadd-notification-center &
 xss-lock --transfer-sleep-lock -- betterlockscreen -l blur &
 /$HOME/.config/polybar/launch.sh >/dev/null 2>&1 &
-mpdscribble --conf "/$HOME/.config/mpdscribble/mpdscribble.conf" &
-
+mpdscribble --conf "$HOME/.config/mpdscribble/mpdscribble.conf" &
 setxkbmap -option caps:escape
 
 if [ -d /etc/X11/xinit/xinitrc.d ]; then
@@ -57,10 +50,8 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
 fi
 
 if [[ $(hostname) == 'somnia' ]]; then
-	flatpak run com.discordapp.Discord &
+	flatpak run com.discordapp.Discord --start-minimized &
 	flatpak run com.spotify.Client &
 fi
-
-wal -R
 
 exec bspwm

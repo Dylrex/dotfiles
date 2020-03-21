@@ -19,9 +19,18 @@ export ZDOTDIR="$HOME/.config/zsh"
 export WGETRC="$HOME/.config/wget/wgetrc"
 export INPUTRC="$HOME/.config/inputrc"
 
+# Etc Progs
 export DICS="/usr/share/stardict/dic/"
-
+export FZF_DEFAULT_OPTS="--layout=reverse --height 40%"
 export _JAVA_AWT_WM_NONREPARENTING="1"
+
+# Enable Hangul with Nabi
+export XIM=nabi
+export XIM_ARGS=
+export XIM_PROGRAM="nabi"
+export XMODIFIERS="@im=nabi"
+export GTK_IM_MODULE=xim
+export QT_IM_MODULE=xim
 
 # Slow Gnome Apps Fix
 dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY
