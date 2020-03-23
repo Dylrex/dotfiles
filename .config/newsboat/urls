@@ -7,8 +7,10 @@ https://www.archlinux.org/feeds/news/ "tech" "news" "linux"
 https://news.ycombinator.com/rss "tech" "news"
 https://www.reddit.com/r/linux.rss "~r/Linux" "tech" "reddit" "news" "linux"
 https://www.reddit.com/r/privacy.rss "~r/Privacy" "tech" "reddit" "news"
+https://lukesmith.xyz/rss.xml "~Luke Smith (Blog)" "linux" "tech"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA "~Luke Smith (YouTube)" "linux" "tech"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCld68syR8Wi-GY_n4CaoJGA "~Brodie Robertson (YouTube)" "linux" "tech"
+https://opensourceweekly.org/index.xml
 
 https://www.reddit.com/r/korean.rss "~r/Korean" "language" "reddit" "korean"
 
