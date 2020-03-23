@@ -26,7 +26,7 @@ alias \
 alias \
 	p="sudo pacman" \
 	pu="sudo pacman -Syu" \
-	pfu="sudo pacman -Syu && yay -Syu && flatpak update" \
+	pfu="yay -Syu --devel && flatpak update" \
 	pd="sudo pacman -Rs $(pacman -Qtdq)" \
 	v="nvim" \
 	i3cfg="nvim ~/.config/i3/config" \
