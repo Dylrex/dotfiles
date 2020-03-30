@@ -4,8 +4,8 @@
 background = ${xrdb:color0:#222}
 background-alt = ${xrdb:color3:#222}
 foreground = ${xrdb:color7:#222}
-foreground-alt = ${xrdb:color2:#555}
-highlight = ${xrdb:color3:#f00}
+foreground-alt = ${xrdb:color6:#555}
+highlight = ${xrdb:color4:#f00}
 highlight-alt = ${xrdb:color9:#f00}
 urgent = #f00
 
@@ -35,7 +35,7 @@ module-margin-left = 1
 module-margin-right = 1
 
 font-0 = Noto Sans:size=11;1
-font-1 = Inconsolata Nerd Font:size=11;1
+font-1 = Inconsolata Nerd Font:size=11;
 font-2 = Noto Color Emoji:scale=11:style=Regular;2
 font-3 = Symbola:pixelsize=11;1
 font-4 = NanumGothic:size=11;1
@@ -395,7 +395,7 @@ time = "%H:%M"
 ;time-alt = %H:%M:%S
 ;time-alt = %H:%M:%S
 
-format-prefix = " "
+format-prefix = "  "
 format-prefix-foreground = ${colors.foreground}
 format-underline = ${colors.highlight}
 
@@ -409,7 +409,7 @@ use-ui-max = true
 interval = 5
 
 format-volume = <label-volume> <bar-volume>
-label-volume = 
+label-volume = "  "
 label-volume-foreground = ${root.foreground}
 
 format-muted-prefix = " "
@@ -426,11 +426,11 @@ bar-volume-foreground-5 = #f5a70a
 bar-volume-foreground-6 = #ff5555
 bar-volume-gradient = false
 bar-volume-indicator = |
-bar-volume-indicator-font = 2
+bar-volume-indicator-font = 4
 bar-volume-fill = ─
-bar-volume-fill-font = 2
+bar-volume-fill-font = 4
 bar-volume-empty = ─
-bar-volume-empty-font = 2
+bar-volume-empty-font = 4
 bar-volume-empty-foreground = ${colors.foreground-alt}
 
 click-right = pavucontrol &
@@ -547,7 +547,7 @@ format-underline = ${colors.foreground}
 type = custom/script
 exec = mailbox
 interval = 5
-format-prefix = " "
+format-prefix = "  "
 format-prefix-foreground = ${colors.foreground}
 format-underline = ${colors.highlight}
 click-left = st -e neomutt
@@ -571,3 +571,4 @@ exec = /$HOME/.local/bin/statusbar/weather
 interval = 1000
 format-underline = ${colors.highlight}
 label-font = 6
+

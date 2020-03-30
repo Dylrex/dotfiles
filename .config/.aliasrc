@@ -42,8 +42,7 @@ alias \
 	tremcli="transmission-remote-cli" \
 	dots="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME" \
 	feh="feh --scale-down --auto-zoom --image-bg black" \
-	rcfg="/$HOME/.config/bspwm/bspwmrc" \
-	rpol="/$HOME/.config/polybar/launch.sh"
+	rcfg="/$HOME/.config/bspwm/bspwmrc"
 
 # Non XDG compliant T-T
 alias \
