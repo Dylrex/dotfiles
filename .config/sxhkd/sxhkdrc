@@ -16,7 +16,7 @@ super + u
 super + p
 	$TERMINAL -e transmission-remote-cli
 super + d
-	j4-dmenu-desktop --display-bin --term=$TERMINAL --dmenu=dmenuwal
+	j4-dmenu-desktop --term=$TERMINAL --dmenu="(cat ; (stest -flx $(echo $PATH | tr : ' ') | sort -u)) | dmenuwal"
 super + shift + g
 	$TERMINAL -e htop
 super + c

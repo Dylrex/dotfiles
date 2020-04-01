@@ -11,7 +11,6 @@ nabi &
 keepassxc &
 protonmail-bridge --no-window &
 dunstcolours &
-#deadd-notification-center &
 xss-lock --transfer-sleep-lock -- betterlockscreen -l blur &
 mpdscribble --conf "$HOME/.config/mpdscribble/mpdscribble.conf" &
 setxkbmap -option caps:escape
@@ -37,7 +36,7 @@ fi
 
 # BSPWM
 sxhkd &
-/$HOME/.local/bin/statusbar/rpol >/dev/null 2>&1 &
+rpol >/dev/null 2>&1 &
 exec bspwm
 
 ## DWM
