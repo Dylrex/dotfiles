@@ -124,6 +124,8 @@ set clipboard+=unnamedplus
 	autocmd BufWritePost *Xresources,*Xdefaults !xrdb %
 " Update binds when sxhkdrc is updated.
 	autocmd BufWritePost *sxhkdrc !pkill -USR1 sxhkd
+" Refresh polybar when polybar cfg is updated.
+	autocmd BufWritePost *polybar/config !rpol
 
 " my_file.ino [arduino:avr:uno]
 	function! MyStatusLine()

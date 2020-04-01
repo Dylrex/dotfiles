@@ -53,7 +53,6 @@
 /* *.color15: #3c3836 */
 /* *.background: #fbf1c7 */
 /* *.foreground: #282828 */
-/* st.alpha: 0.9 */
 
 /* !! brogrammer: */
 /* *.foreground:  #d6dbe5 */
@@ -150,8 +149,6 @@
 /* *.color14:    #9AEDFE */
 /* *.color7:     #BFBFBF */
 /* *.color15:    #E6E6E6 */
-
-/* *.background: .color0 */
 /* *.color256: 0#1d2021 */
 /* *.color257: 15#ebdbb2 */
 
@@ -229,3 +226,40 @@
 /* !white */
 /* *color7:     #E7E8E9 */
 /* *color15:    #F3F3F4 */
+
+/* ! Visibone */
+/* *color0:             #666666 */
+/* *color8:             #999999 */
+/* *color1:             #CC6666 */
+/* *color9:           #FF9999 */
+/* *color2:             #66CC99 */
+/* *color10:            #99FFCC */
+/* *color3:             #CC9966 */
+/* *color4:             #6699CC */
+/* *color12:            #99CCFF */
+/* *color5:             #CC6699 */
+/* *color13:            #FF99CC */
+/* *color6:             #66CCCC */
+/* *color14:            #99FFFF */
+/* *color7:             #CCCCCC */
+/* *color15:            #FFFFFF */
+
+/* ! colourfulcolours */
+/* *color0: #151515 */
+/* *color8: #696969 */
+/* *color1: #FF8EAF */
+/* *color9: #ED4C7A */
+/* *color2:  #A6E25F */
+/* *color10: #A6E179 */
+/* *color3: #F8E578 */
+/* *color11: #FFDF6B */
+/* *color4: #A6E2F0 */
+/* *color12: #79D2FF */
+/* *color5: #E85B92 */
+/* *color13: #BB5D79 */
+/* *color6: #5F868F */
+/* *color14: #87A8AF */
+/* *color7: #D5F1F2 */
+/* *color15: #E2F1F6 */
+
+

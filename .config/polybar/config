@@ -385,8 +385,9 @@ label-disconnected-foreground = ${colors.gray}
 type = internal/date
 interval = 60
 
-date = "%A %y%m%d -"
-time = "%H:%M"
+date = "%A %y%m%d "
+time = "  %H:%M"
+
 #date = "%Y %b %d (%a)"
 #time = "%I:%M%p"
 
@@ -395,7 +396,7 @@ time = "%H:%M"
 ;time-alt = %H:%M:%S
 ;time-alt = %H:%M:%S
 
-format-prefix = "  "
+format-prefix = "   "
 format-prefix-foreground = ${colors.foreground}
 format-underline = ${colors.highlight}
 
