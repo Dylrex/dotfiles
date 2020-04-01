@@ -10,7 +10,7 @@ picom &
 nabi &
 keepassxc &
 protonmail-bridge --no-window &
-dunst &
+dunstcolours &
 #deadd-notification-center &
 xss-lock --transfer-sleep-lock -- betterlockscreen -l blur &
 mpdscribble --conf "$HOME/.config/mpdscribble/mpdscribble.conf" &
