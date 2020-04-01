@@ -4,16 +4,15 @@
 eval $(/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh)
 export SSH_AUTH_SOCK
 
-# program startup
-sxhkd &
+# wm-independant program startup
 nm-applet &
 picom &
 nabi &
 keepassxc &
 protonmail-bridge --no-window &
-deadd-notification-center &
+dunst &
+#deadd-notification-center &
 xss-lock --transfer-sleep-lock -- betterlockscreen -l blur &
-/$HOME/.local/bin/statusbar/rpol >/dev/null 2>&1 &
 mpdscribble --conf "$HOME/.config/mpdscribble/mpdscribble.conf" &
 setxkbmap -option caps:escape
 
@@ -31,8 +30,19 @@ if [[ $(hostname) == 'somnia' ]]; then
 	flatpak run com.spotify.Client &
 fi
 
+# Colours
 #wal -R
 ~/.fehbg &
 [[ -f ~/.config/Xresources ]] && xrdb -merge ~/.config/Xresources
 
+# BSPWM
+sxhkd &
+/$HOME/.local/bin/statusbar/rpol >/dev/null 2>&1 &
 exec bspwm
+
+## DWM
+#dwmblocks &
+#while true; do
+#    dwm 2> ~/.dwm.log
+#    #dwm >/dev/null 2>&1
+#done

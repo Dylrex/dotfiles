@@ -44,6 +44,12 @@ alias \
 	feh="feh --scale-down --auto-zoom --image-bg black" \
 	rcfg="/$HOME/.config/bspwm/bspwmrc"
 
+# Directories
+alias \
+	scripts="cd ~/.local/bin/" \
+	conf="cd ~/.config" \
+	build="cd ~/Source"
+
 # Non XDG compliant T-T
 alias \
 	abook="abook -C ~/.config/abook/abookrc --datafile ~/.config/abook/addressbook" \

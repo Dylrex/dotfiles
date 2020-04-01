@@ -534,18 +534,18 @@ type = custom/script
 interval = 1
 #format-prefix = "♫  "
 format = <label>
-exec = python /$HOME/.local/bin/statusbar/spotifystatus.py -f '{play_pause}  {artist} - {song}' --playpause-font=4
+exec = python $HOME/.local/bin/polybar/polyspot -f '{play_pause}  {artist} - {song}' --playpause-font=4
 ;format-underline = ${colors.highlight}
 
 [module/updates]
 type = custom/script
-exec = /$HOME/.local/bin/statusbar/pacupdates
+exec = pacupdates
 interval = 600
 format-underline = ${colors.foreground}
 
 [module/mutt-wizard]
 type = custom/script
-exec = mailbox
+exec = polymail
 interval = 5
 format-prefix = "  "
 format-prefix-foreground = ${colors.foreground}
@@ -562,12 +562,12 @@ format-background = ${colors.background}
 
 [module/vpn]
 type = custom/script
-exec = /$HOME/.local/bin/statusbar/vpnstatus
+exec = polyvpn
 interval = 5
 
 [module/weather]
 type = custom/script
-exec = /$HOME/.local/bin/statusbar/weather
+exec = polyweather
 interval = 1000
 format-underline = ${colors.highlight}
 label-font = 6
