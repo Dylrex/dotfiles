@@ -42,6 +42,6 @@ fi
 # DWM
 dwmblocks &
 while true; do
-    #dwm 2> ~/.local/share/dwm.log
+    #dwm 2> ~/.cache/dwm.log
     dwm >/dev/null 2>&1
 done
