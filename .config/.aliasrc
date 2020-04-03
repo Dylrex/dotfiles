@@ -29,10 +29,12 @@ alias \
 	pfu="yay -Syu --devel && flatpak update" \
 	pd="sudo pacman -Rs $(pacman -Qtdq)" \
 	v="nvim" \
-	i3cfg="nvim ~/.config/i3/config" \
-	cfg="nvim ~/.config/bspwm/bspwmrc" \
+	cfg="nvim ~/Source/dwm/config.h" \
+	rdwm="sudo make -C ~/Source/dwm clean install" \
+	bspcfg="nvim ~/.config/bspwm/bspwmrc" \
 	hotkey="nvim ~/.config/sxhkd/sxhkdrc" \
 	polcfg="nvim /$HOME/.config/polybar/config" \
+	zshcfg="nvim /$HOME/.config/zsh/.zshrc" \
 	ka="killall" \
 	g="git" \
 	f="ranger" \

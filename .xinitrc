@@ -34,14 +34,14 @@ fi
 ~/.fehbg &
 [[ -f ~/.config/Xresources ]] && xrdb -merge ~/.config/Xresources
 
-# BSPWM
-sxhkd &
-rpol >/dev/null 2>&1 &
-exec bspwm
+# # BSPWM
+# sxhkd &
+# rpol >/dev/null 2>&1 &
+# exec bspwm
 
-## DWM
-#dwmblocks &
-#while true; do
-#    dwm 2> ~/.dwm.log
-#    #dwm >/dev/null 2>&1
-#done
+# DWM
+dwmblocks &
+while true; do
+    #dwm 2> ~/.local/share/dwm.log
+    dwm >/dev/null 2>&1
+done

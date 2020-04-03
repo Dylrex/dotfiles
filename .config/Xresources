@@ -1,5 +1,5 @@
 !! Transparency:
-*.alpha: 0.8
+*.alpha: 0.95
 
 !! Set a default font and font size as below:
 *.font: monospace:size=12
@@ -170,33 +170,34 @@
 /* *.color14: #6cbeb5 */
 /* *.color15: #c1c8d6 */
 
+/* *.foreground: #D7D0C7 */
 /* *.background: #191919 */
 /* *.color256: #191919 */
 /* *.color257: #b2c8d6 */
 
-! x::dotshare
-*foreground: #D7D0C7
-*background: #151515
+/* ! x::dotshare */
+/* *foreground: #D7D0C7 */
+/* *background: #151515 */
 
-!black
-! *color0:     #AF875F
-! *color8:     #AF875F
-*color0:     #101010
-*color8:     #404040
-*color1:     #E84F4F
-*color9:     #D23D3D
-*color2:     #B8D68C
-*color10:    #A0CF5D
-*color3:     #E1AA5D
-*color11:    #F39D21
-*color4:     #7DC1CF
-*color12:    #4E9FB1
-*color5:     #9B64FB
-*color13:    #8542FF
-*color6:     #6D878D
-*color14:    #42717B
-*color7:     #dddddd
-*color15:    #dddddd
+/* !black */
+/* ! *color0:     #AF875F */
+/* ! *color8:     #AF875F */
+/* *color0:     #101010 */
+/* *color8:     #404040 */
+/* *color1:     #E84F4F */
+/* *color9:     #D23D3D */
+/* *color2:     #B8D68C */
+/* *color10:    #A0CF5D */
+/* *color3:     #E1AA5D */
+/* *color11:    #F39D21 */
+/* *color4:     #7DC1CF */
+/* *color12:    #4E9FB1 */
+/* *color5:     #9B64FB */
+/* *color13:    #8542FF */
+/* *color6:     #6D878D */
+/* *color14:    #42717B */
+/* *color7:     #dddddd */
+/* *color15:    #dddddd */
 
 /* ! X::GetFresh */
 /* *foreground: #DDCCBB */
@@ -263,3 +264,24 @@
 /* *color15: #E2F1F6 */
 
 
+! Orangeish Theme - Generated from Wal
+*color0:  #0E0A0B
+!*color1:  #122D56
+*color1:  #36619c
+!*color2:  #3D4356
+*color2:  #b0b0b0
+*color3:  #5C5258
+*color4:  #975F26
+*color5:  #966C51
+*color6:  #B0956E
+*color7:  #9eabc0
+*color8:  #6e7786
+*color9:  #122D56
+*color10:  #3D4356
+*color11:  #5C5258
+*color12:  #975F26
+*color13:  #966C51
+*color14:  #B0956E
+*color15:  #9eabc0
+*foreground:        #9eabc0
+*background:        #0E0A0B

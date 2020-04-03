@@ -7,6 +7,8 @@ foreground = ${xrdb:color7:#222}
 foreground-alt = ${xrdb:color6:#555}
 highlight = ${xrdb:color4:#f00}
 highlight-alt = ${xrdb:color9:#f00}
+; highlight = ${xrdb:color0:#222}
+; highlight-alt = ${xrdb:color0:#222}
 urgent = #f00
 
 #### MAIN BAR ####
@@ -233,6 +235,8 @@ label-unmounted-foreground = ${colors.foreground-alt}
 
 [module/bspwm]
 type = internal/bspwm
+ws-icon-1= office
+format = <label-state> <label-mode>
 
 pin-workspaces = true
 
