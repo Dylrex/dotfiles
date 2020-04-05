@@ -22,6 +22,7 @@ Plug 'stevearc/vim-arduino'
 Plug 'lervag/vimtex'
 Plug 'ying17zi/vim-live-latex-preview', { 'for': 'tex' }
 Plug 'vim-pandoc/vim-pandoc-syntax'
+Plug 'unblevable/quick-scope'
 call plug#end()
 
 set bg=light

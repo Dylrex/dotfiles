@@ -1,12 +1,9 @@
 # General
-https://feeds.feedburner.com/IndependentAustralia "news"
 https://www.illawarramercury.com.au/rss.xml "~Illawarra Mercury" "news"
 https://www.uow.edu.au/media/rss/ "~University of Wollongong" "news" "uni"
 # Tech/Linux
 https://www.archlinux.org/feeds/news/ "tech" "news" "linux"
 https://news.ycombinator.com/rss "tech" "news"
-https://www.reddit.com/r/linux.rss "~r/Linux" "tech" "reddit" "news" "linux"
-https://www.reddit.com/r/privacy.rss "~r/Privacy" "tech" "reddit" "news"
 https://lukesmith.xyz/rss.xml "~Luke Smith (Blog)" "linux" "tech"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA "~Luke Smith (YouTube)" "linux" "tech"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCld68syR8Wi-GY_n4CaoJGA "~Brodie Robertson (YouTube)" "linux" "tech"
@@ -28,7 +25,6 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UC-lHJZR3Gqxm24_Vd_AJ5Yw "~P
 
 # K
 https://twitrss.me/twitter_user_to_rss/?user=OH_mes2 "~OH_mes2 (Twitter)" "kpop" "twitter"
-https://www.reddit.com/r/kpop.rss "~r/Kpop" "kpop" "reddit"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCe_oTYByLWQYCUmgmOMU_xw "~IZ*ONE (YouTube)" "entertainment" "kpop"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCijULR2sXLutCRBtW3_WEfA "~Dreamcatcher (YouTube)" "entertainment" "kpop"
 

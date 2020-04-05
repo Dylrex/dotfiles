@@ -1,5 +1,5 @@
 !! Transparency:
-*.alpha: 0.95
+*.alpha: 0.80
 
 !! Set a default font and font size as below:
 *.font: monospace:size=12
@@ -267,7 +267,7 @@
 ! Orangeish Theme - Generated from Wal
 *color0:  #0E0A0B
 !*color1:  #122D56
-*color1:  #36619c
+*color1:  #4a70a5
 !*color2:  #3D4356
 *color2:  #b0b0b0
 *color3:  #5C5258
