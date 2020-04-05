@@ -17,6 +17,12 @@ zstyle ':completion:*' menu select
 zmodload zsh/complist
 compinit
 
+# Automatically quote pasted urls
+autoload -Uz bracketed-paste-magic
+zle -N bracketed-paste bracketed-paste-magic
+autoload -Uz url-quote-magic
+zle -N self-insert url-quote-magic
+
 # Include hidden files in autocomplete:
 _comp_options+=(globdots)
 
