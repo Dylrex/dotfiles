@@ -1,10 +1,11 @@
 #!/bin/sh
 
 dwm_spotify () {
-    if ps -C spotify > /dev/null; then
-        ARTIST=$(playerctl -p spotify metadata artist)
-        TRACK=$(playerctl -p spotify metadata title)
-        STATUS=$(playerctl -p spotify status)
+if ps -C spotify > /dev/null; then
+       	ARTIST=$(playerctl -p spotify metadata artist)
+       	TRACK=$(playerctl -p spotify metadata title)
+       	STATUS=$(playerctl -p spotify status)
+	ALBUM=$(playerctl -p spotify metadata album)
 
 	if [ "$STATUS" = "Playing" ]; then
                 STATUS="▶"
@@ -12,9 +13,24 @@ dwm_spotify () {
                 STATUS=""
 	fi
 
-        printf "%s%s %s - %s " "$SEP1" "$STATUS" "$ARTIST" "$TRACK"
+        printf "%s%s %s: %s [%s] " "$SEP1" "$STATUS" "$ARTIST" "$TRACK" "$ALBUM"
         printf "%s\n" "$SEP2"
-    fi
+
+elif ps -C spotifyd > /dev/null; then
+	ARTIST=$(playerctl -p spotifyd metadata artist)
+       	TRACK=$(playerctl -p spotifyd metadata title)
+       	STATUS=$(playerctl -p spotifyd status)
+	ALBUM=$(playerctl -p spotifyd metadata album)
+
+	if [ "$STATUS" = "Playing" ]; then
+                STATUS="▶"
+            else
+                STATUS=""
+	fi
+
+        printf "%s%s %s: %s [%s] " "$SEP1" "$STATUS" "$ARTIST" "$TRACK" "$ALBUM"
+        printf "%s\n" "$SEP2"
+fi
 }
 
 dwm_spotify
