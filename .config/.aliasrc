@@ -26,7 +26,7 @@ alias \
 alias \
 	p="sudo pacman" \
 	pu="sudo pacman -Syu" \
-	pfu="yay -Syu --devel && flatpak update" \
+	pfu="yay -Syu --devel && flatpak update && pkill -RTMIN+8 dwmblocks" \
 	pd="sudo pacman -Rs $(pacman -Qtdq)" \
 	v="nvim" \
 	cfg="nvim ~/Source/dwm/config.h" \

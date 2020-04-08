@@ -5,6 +5,7 @@ eval $(/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh
 export SSH_AUTH_SOCK
 
 # wm-independant program startup
+nordvpn c&
 nm-applet &
 picom &
 nabi &
