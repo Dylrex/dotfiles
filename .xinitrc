@@ -28,6 +28,8 @@ fi
 if [[ $(hostname) == 'somnia' ]]; then
 	flatpak run com.discordapp.Discord --start-minimized --disable-seccomp-filter-sandbox &
 	flatpak run com.spotify.Client &
+elif [[ $(hostname) == 'laptop' ]]; then
+	xrandr --output eDP1 --scale 1 --dpi 120
 fi
 
 # Colours

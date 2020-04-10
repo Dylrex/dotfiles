@@ -13,7 +13,7 @@ if ps -C spotify > /dev/null; then
                 STATUS=""
 	fi
 
-        printf "%s%s %s: %s [%s] " "$SEP1" "$STATUS" "$ARTIST" "$TRACK" "$ALBUM"
+        printf "%s%s %s: %s " "$SEP1" "$STATUS" "$ARTIST" "$TRACK"
         printf "%s\n" "$SEP2"
 
 elif ps -C spotifyd > /dev/null; then
@@ -28,7 +28,8 @@ elif ps -C spotifyd > /dev/null; then
                 STATUS=""
 	fi
 
-        printf "%s%s %s: %s [%s] " "$SEP1" "$STATUS" "$ARTIST" "$TRACK" "$ALBUM"
+        #printf "%s%s %s: %s [%s] " "$SEP1" "$STATUS" "$ARTIST" "$TRACK" "$ALBUM"
+        printf "%s%s %s: %s " "$SEP1" "$STATUS" "$ARTIST" "$TRACK"
         printf "%s\n" "$SEP2"
 fi
 }

@@ -20,7 +20,6 @@ Plug 'tpope/vim-commentary'
 Plug 'kovetskiy/sxhkd-vim'
 Plug 'stevearc/vim-arduino'
 Plug 'lervag/vimtex'
-Plug 'ying17zi/vim-live-latex-preview', { 'for': 'tex' }
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'unblevable/quick-scope'
 call plug#end()
@@ -43,12 +42,11 @@ set clipboard+=unnamedplus
 " Disables automatic commenting on newline:
 	autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
+	autocmd FileType tex,latex,markdown setlocal spell spelllang=en_au
+
 " Arduino in Vim! :)
 	let g:arduino_cmd = '/usr/share/arduino/arduino'
 	let g:arduino_dir = '/usr/share/arduino'
-
-" LaTeX default pdf
-	let g:livepreview_previewer = 'zathura'
 
 " Goyo plugin makes text more readable when writing prose:
 	map <leader>f :Goyo \| set bg=light \| set linebreak<CR>

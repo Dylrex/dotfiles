@@ -24,6 +24,7 @@ alias \
 
 # ETC
 alias \
+	bib="nvim /$HOME/Documents/University/uni.bib" \
 	p="sudo pacman" \
 	pu="sudo pacman -Syu" \
 	pfu="yay -Syu --devel && flatpak update && pkill -RTMIN+8 dwmblocks" \
