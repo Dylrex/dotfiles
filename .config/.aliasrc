@@ -5,8 +5,9 @@ command -v nvim >/dev/null && alias vim="nvim" vimdiff="nvim -d"
 # Colours
 alias \
 	ls="ls -hN --color=auto --group-directories-first" \
-	la="ls -a --color=auto --group-directories-first" \
-	ll="ls -la --color=auto" \
+	l="ls -CF" \
+	la="ls -a" \
+	ll="ls -la" \
 	grep="grep --color=auto" \
 	diff="diff --color=auto" \
 	ccat="highlight --out-format=ansi"
@@ -16,7 +17,7 @@ alias \
 	bat="cat /sys/class/power_supply/BAT?/capacity" \
 	cp="cp -iv" \
 	mv="mv -iv" \
-	rm="rm -v" \
+	rm="rm -iv" \
 	mkd="mkdir -pv" \
 	yt="youtube-dl --add-metadata -i" \
 	yta="yt -x -f bestaudio/best" \
@@ -37,7 +38,7 @@ alias \
 	polcfg="nvim /$HOME/.config/polybar/config" \
 	zshcfg="nvim /$HOME/.config/zsh/.zshrc" \
 	ka="killall" \
-	g="git" \
+	gs="git status" \
 	f="ranger" \
 	e="nvim" \
 	def="/usr/bin/sdcv" \

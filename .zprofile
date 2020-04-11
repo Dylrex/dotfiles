@@ -1,4 +1,4 @@
-# ~/zprofile
+#!/bin/zsh
 
 # $HOME/.local/bin in path
 export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | tr '\n' ':' | sed 's/:*$//')"
@@ -16,18 +16,20 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority"
 export NOTMUCH_CONFIG="$HOME/.config/notmuch-config"
 export GTK2_RC_FILES="$HOME/.config/gtk-2.0/gtkrc-2.0"
+export GNUPGHOME="$HOME/.gnupg"
 export PASSWORD_STORE_DIR="$HOME/.local/share/password-store"
 export LESSHISTFILE="/dev/null/"
 export ZDOTDIR="$HOME/.config/zsh"
 export WGETRC="$HOME/.config/wget/wgetrc"
 export INPUTRC="$HOME/.config/inputrc"
-export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 export OCTAVE_HISTFILE="$XDG_CACHE_HOME/octave-hsts"
 export OCTAVE_SITE_INITFILE="$XDG_CONFIG_HOME/octave/octaverc"
 export WINEPREFIX="$XDG_DATA_HOME/wineprefixes/default"
 export ANDROID_SDK_HOME="$XDG_CONFIG_HOME/android"
 export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME/java"
+export TMUX_TMPDIR="$XDG_RUNTIME_DIR"
+export CARGO_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/cargo"
 
 # Etc Progs
 export DICS="/usr/share/stardict/dic/"
