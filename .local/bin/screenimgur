@@ -1,2 +1,2 @@
-#!/bin/bash
+#!/bin/sh
 imgur-screenshot -s -k true

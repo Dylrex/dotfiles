@@ -11,10 +11,12 @@
 #  toggle mute
 #  if muting, set icon to mute, notify
 #  if unmuting, set icon to current volume level, notify, ding
-if [ $# -ne 1 ]; then
-    echo "Need 1 argument (volup, voldown, volmute)"
-    exit 1;
-fi
+#if [ $# -ne 1 ]; then
+#    echo "Need 1 argument (volup, voldown, volmute)"
+#    exit 1;
+#fi
+[ $# -ne 1 ] && echo "Need 1 argument (volup, voldown, volmute)" && exit 1
+
 getnewvol () {
     # return a percentage
     CURVOL=`pactl list sinks | grep -i volume | head -1 | awk '{print $5}' | sed -e 's/%//'`
