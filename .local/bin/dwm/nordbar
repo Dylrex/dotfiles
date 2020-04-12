@@ -1,3 +1,4 @@
 #!/bin/sh
-
-STATUS=$(nordvpn status | grep Status | tr -d ' ' | cut -d ':' -f2) && [ "$STATUS" = "Connected" ] && echo "🔗$(nordvpn status | grep City | cut -d ':' -f2)" || echo "no vpn"
+ [ "$(nordvpn status | grep Status | tr -d ' ' | cut -d ':' -f2)" == "Connected" ] &&
+	 echo "🔗$(nordvpn status | grep "Current server" | cut -d ':' -f2 | head -c 3)" ||
+	 echo "❎vpn"

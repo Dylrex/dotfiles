@@ -50,7 +50,5 @@ dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XA
 # A E S T H E T I C
 export PF_INFO="ascii title os kernel pkgs memory wm shell palette"
 
-[ -f "$HOME/.config/.aliasrc" ] && source "$HOME/.config/.aliasrc"
-
 # Start graphical server on tty1 if not already running.
 [ "$(tty)" = "/dev/tty1" ] && ! pgrep -x Xorg >/dev/null && exec startx

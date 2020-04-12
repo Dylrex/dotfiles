@@ -2,7 +2,7 @@
 
 if ps -C spotify > /dev/null; then
        	ARTIST=$(playerctl -p spotify metadata artist)
-       	TRACK=$(playerctl -p spotify metadata title)
+       	TRACK=$(playerctl -p spotify metadata title | head -c 30)
        	STATUS=$(playerctl -p spotify status)
 	ALBUM=$(playerctl -p spotify metadata album)
 
