@@ -11,10 +11,10 @@ fi
 # host based program startup
 if [[ $(hostname) == 'somnia' ]]; then
 	flatpak run com.spotify.Client &
-	mpdscribble --conf "$HOME/.config/mpdscribble/mpdscribble.conf" &
+#	mpdscribble --conf "$HOME/.config/mpdscribble/mpdscribble.conf" &
 	numlockx &
 elif [[ $(hostname) == 'laptop' ]]; then
-	xrandr --output eDP1 --scale 1 --dpi 120
+	xrandr --output eDP1 --scale 1 --dpi 130
 	nm-applet &
 fi
 
@@ -23,12 +23,14 @@ dwmblocks &
 nabi &
 picom &
 keepassxc &
-protonmail-bridge --no-window &
 dunstcolours &
+#setxkbmap -option caps:escape
+#nordvpn c Australia Sydney &
+#(sleep 20 ; protonmail-bridge --no-window) &
+protonmail-bridge --no-window &
 xss-lock --transfer-sleep-lock -- betterlockscreen -l blur &
-setxkbmap -option caps:escape
-nordvpn c Australia Sydney &
-flatpak run com.discordapp.Discord --start-minimized --disable-seccomp-filter-sandbox &
+#flatpak run com.discordapp.Discord --start-minimized --disable-seccomp-filter-sandbox &
+flatpak run com.discordapp.Discord --start-minimized &
 
 #wal -R
 ~/.fehbg &

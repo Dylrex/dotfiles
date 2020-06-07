@@ -71,6 +71,11 @@ rangercd () {
 bindkey -s '^o' 'rangercd\n'
 bindkey -s '^f' 'cd "$(dirname "$(fzf)")"\n'
 
+# fix systemctl auto complete in zsh.
+_systemctl_unit_state() {
+  typeset -gA _sys_unit_state
+  _sys_unit_state=( $(__systemctl list-unit-files "$PREFIX*" | awk '{print $1, $2}') ) }
+
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line

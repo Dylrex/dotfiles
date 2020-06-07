@@ -11,7 +11,6 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdtree'
 Plug 'junegunn/goyo.vim'
-Plug 'PotatoesMaster/i3-vim-syntax'
 Plug 'jreybert/vimagit'
 Plug 'lukesmithxyz/vimling'
 Plug 'vimwiki/vimwiki'
@@ -21,10 +20,17 @@ Plug 'kovetskiy/sxhkd-vim'
 Plug 'stevearc/vim-arduino'
 Plug 'lervag/vimtex'
 Plug 'vim-pandoc/vim-pandoc-syntax'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'unblevable/quick-scope'
+Plug 'tomasiser/vim-code-dark'
 call plug#end()
 
-set bg=light
+"npm and nodejs packages needed for coc
+
+let g:airline_theme = 'codedark'
+"colorscheme codedark
+
+"set bg=light
 set go=a
 set mouse=a
 set nohlsearch
