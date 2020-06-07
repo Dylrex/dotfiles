@@ -1,0 +1,45 @@
+#!/bin/sh
+
+NUM="${2:-5}"
+
+getnewvol () {
+    # return a percentage
+    CURVOL=`pactl list sinks | grep -i volume | head -1 | awk '{print $5}' | sed -e 's/%//'`
+    if [ `pactl list sinks  | grep Mute | awk '{print $2}'` = 'yes' ]; then
+        echo "Muted"
+        ICON=audio-volume-muted
+        return
+    fi
+    echo "Current volume $CURVOL"
+    if [ $CURVOL -gt 75 ]; then
+        ICON=audio-volume-high
+    elif [ $CURVOL -gt 35 ]; then
+        ICON=audio-volume-medium
+    elif [ $CURVOL -gt 0 ]; then
+        ICON=audio-volume-low
+    fi
+
+}
+
+mutestatus(){
+    if [ `pactl list sinks  | grep Mute | awk '{print $2}'` = 'yes' ]; then
+        MSG='Mute'
+        ICON='audio-volume-muted'
+    else
+        MSG='Unmute'
+        ICON='audio-volume-muted'
+    fi
+    getnewvol
+}
+
+case "$1" in
+	up) pactl set-sink-volume @DEFAULT_SINK@ +"$NUM"% ; MSG='Volume Up' ; getnewvol ; echo "Up" ;;
+	down) pactl set-sink-volume @DEFAULT_SINK@ -"$NUM"% ; MSG='Volume Down' ; getnewvol ; echo "Down" ;;
+	mute) pactl set-sink-mute @DEFAULT_SINK@ toggle ; mutestatus ;;
+esac > /dev/null
+
+echo "ICON: $ICON"
+echo "MSG: $MSG"
+echo "CURVOL: $CURVOL"
+notify-send.sh -R /tmp/vol-notification "$MSG ($CURVOL%)" -i /usr/share/icons/Adwaita/32x32/legacy/$ICON.png
+paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga
