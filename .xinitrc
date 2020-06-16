@@ -26,8 +26,7 @@ keepassxc &
 dunstcolours &
 #setxkbmap -option caps:escape
 #nordvpn c Australia Sydney &
-#(sleep 20 ; protonmail-bridge --no-window) &
-protonmail-bridge --no-window &
+protonmail-bridge --noninteractive --no-window &
 xss-lock --transfer-sleep-lock -- betterlockscreen -l blur &
 #flatpak run com.discordapp.Discord --start-minimized --disable-seccomp-filter-sandbox &
 flatpak run com.discordapp.Discord --start-minimized &

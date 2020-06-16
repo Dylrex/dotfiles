@@ -27,6 +27,8 @@ call plug#end()
 
 "npm and nodejs packages needed for coc
 
+let g:airline#extensions#wordcount#filetypes = '\vasciidoc|help|mail|markdown|markdown.pandoc|org|rst|tex|text|vimwiki|rmd'
+set laststatus=2    " enables vim-airline.
 let g:airline_theme = 'codedark'
 "colorscheme codedark
 
