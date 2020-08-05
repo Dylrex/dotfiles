@@ -10,15 +10,16 @@ fi
 
 # host based program startup
 if [[ $(hostname) == 'somnia' ]]; then
+#	dmigpumain &
 	flatpak run com.spotify.Client &
 #	mpdscribble --conf "$HOME/.config/mpdscribble/mpdscribble.conf" &
 	numlockx &
 elif [[ $(hostname) == 'laptop' ]]; then
 	xrandr --output eDP1 --scale 1 --dpi 130
-	nm-applet &
 fi
 
 # universal program startup
+nm-applet &
 dwmblocks &
 nabi &
 picom &

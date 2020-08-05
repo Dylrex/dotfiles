@@ -41,6 +41,7 @@ export DICS="/usr/share/stardict/dic/"
 export FZF_DEFAULT_OPTS="--layout=reverse --height 40%"
 export _JAVA_AWT_WM_NONREPARENTING=1
 export QT_QPA_PLATFORMTHEME="gtk2"	# Have QT use gtk2 theme.
+export STEAM_FRAME_FORCE_CLOSE=1 #force steam to tray
 
 # Enable Hangul with Nabi
 export XIM=nabi

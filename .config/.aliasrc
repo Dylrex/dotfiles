@@ -25,18 +25,17 @@ alias \
 
 # ETC
 alias \
-	bib="nvim /$HOME/Documents/University/uni.bib" \
+	bib="nvim /$HOME/docs/University/uni.bib" \
 	p="sudo pacman" \
 	pu="sudo pacman -Syu" \
 	pfu="yay -Syu --devel && flatpak update && pkill -RTMIN+8 dwmblocks" \
 	pd="sudo pacman -Rs $(pacman -Qtdq)" \
 	v="nvim" \
-	cfg="nvim ~/Source/dwm/config.h" \
-	rdwm="sudo make -C ~/Source/dwm clean install" \
-	bspcfg="nvim ~/.config/bspwm/bspwmrc" \
+	cfg="nvim ~/src/dwm/config.h" \
+	rcfg="sudo make -C ~/src/dwm clean install" \
 	hotkey="nvim ~/.config/sxhkd/sxhkdrc" \
-	polcfg="nvim /$HOME/.config/polybar/config" \
-	zshcfg="nvim /$HOME/.config/zsh/.zshrc" \
+	polcfg="nvim /$XDG_CONFIG_HOME/polybar/config" \
+	zshcfg="nvim /$XDG_CONFIG_HOME/zsh/.zshrc" \
 	ka="killall" \
 	gs="git status" \
 	f="ranger" \
@@ -47,8 +46,7 @@ alias \
 	tremcli="transmission-remote-cli" \
 	dots="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME" \
 	feh="feh --scale-down --auto-zoom --image-bg black" \
-	rcfg="/$HOME/.config/bspwm/bspwmrc" \
-	mpds="mpdscribble --conf /$HOME/.config/mpdscribble/mpdscribble.conf" \
+	mpds="mpdscribble --conf /$XDG_CONFIG_HOME/mpdscribble/mpdscribble.conf" \
 
 # Directories
 alias \
